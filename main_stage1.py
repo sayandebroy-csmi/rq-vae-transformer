@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 # Copyright (c) 2022-present, Kakao Brain Corp.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,7 +33,9 @@ from rqvae.trainers import create_trainer
 from rqvae.img_datasets import create_dataset
 from rqvae.optimizer import create_optimizer, create_scheduler
 from rqvae.utils.utils import set_seed, compute_model_size, get_num_conv_linear_layers
+
 from rqvae.utils.setup import setup
+
 
 
 parser = argparse.ArgumentParser()
@@ -33,7 +43,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-m', '--model-config', type=str, default='./configs/c10-igpt.yaml')
 parser.add_argument('-r', '--result-path', type=str, default='./results.tmp')
 parser.add_argument('-l', '--load-path', type=str, default='')
-parser.add_argument('-t', '--test-batch-size', type=int, default=200)
+parser.add_argument('-t', '--test-batch-size', type=int, default=2)
 parser.add_argument('-e', '--test-epoch', type=int, default=-1)
 parser.add_argument('-p', '--postfix', type=str, default='')
 parser.add_argument('--seed', type=int, default=0)
